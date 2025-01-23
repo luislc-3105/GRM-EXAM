@@ -1,9 +1,11 @@
 # GRM-EXAMEN-TECNICO
 
 Requiere almenos:
-  NodeJs 16.20.2
-  Angular: 16.2.12
-  JavaSE: 11
+
+- NodeJs 16.20.2
+- Angular: 16.2.12
+- JavaSE: 11
+
   
 1. Clonar repositorio en local:
 
