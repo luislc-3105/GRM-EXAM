@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col">
+        <div class="d-flex justify-content-between align-items-center my-4">
+            <p class="h4">Mis citas médicas - {{ userFullname }}</p>
+            <a routerLink="../add" class="btn btn-primary rounded-pill" tabindex="-1" role="button" aria-disabled="true">Nueva Cita</a>
+        </div>
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="card border-0 shadow">
+            <div class="card-body m-3">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tipo de Cita</th>
+                            <th scope="col">Médico Asignado</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Hora</th>
+                            <th scope="col">Estatus</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of bookingList; index as i">
+                            <th scope="row">{{ row.id }}</th>
+                            <td>{{ row.type.description }}</td>
+                            <td>{{ row.doctorName }}</td>
+                            <td>{{ row.date}}</td>
+                            <td>{{ row.time + ' hrs' }}</td>
+                            <td>{{ row.status.description }}</td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-link" (click)="onEditRow(row)" >Detalle</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
